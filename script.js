@@ -14,7 +14,6 @@ function generateNumber() {
 generateNumber();
 
 let guessCounter = 0;
-let highscoreCounter = 20;
 
 document.querySelector(".guess").addEventListener("click", function () {
   let guess = document.querySelector(".guess-input").value;
@@ -26,19 +25,19 @@ document.querySelector(".guess").addEventListener("click", function () {
     gameMessage.textContent = "Your guess is too High.";
     guessCounter++;
     numberGuesses.textContent = guessCounter;
-    highscoreCounter--;
-    highscore.textContent = highscoreCounter;
   } else if (Number(guess) < secretNumber) {
     gameMessage.style.color = "#000000";
     gameMessage.textContent = "Your guess is too Low.";
     guessCounter++;
     numberGuesses.textContent = guessCounter;
-    highscoreCounter--;
-    highscore.textContent = highscoreCounter;
   } else if (Number(guess) === secretNumber) {
     hiddenNumber.textContent = secretNumber;
     gameMessage.style.color = "var(--teal)";
     gameMessage.textContent = "You are Correct!";
+    let highscoreCounter = 20 - guessCounter;
+    if (highscore.textContent < highscoreCounter) {
+      highscore.textContent = highscoreCounter;
+    }
     this.disabled = true;
   }
 });
@@ -49,9 +48,7 @@ document.querySelector(".restart").addEventListener("click", function () {
   gameMessage.textContent = "Start Guessing ...";
   document.querySelector(".guess-input").value = "";
   guessCounter = 0;
-  highscoreCounter = 20;
   numberGuesses.textContent = guessCounter;
-  highscore.textContent = highscoreCounter;
   generateNumber();
   document.querySelector(".guess").disabled = false;
 });
