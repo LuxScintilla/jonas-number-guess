@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Number Guess Game</title>
+  </head>
+  <body>
+    <section class="game-wrap">
+      <div class="game-title"><h1>Guess the Number</h1></div>
+      <div class="game-body">
+        <div class="secret-number-container">
+          <h2 class="secret-number">?</h2>
+        </div>
+        <div class="game-text">
+          <p class="message">Start Guessing ...</p>
+          <p class="guesses-message">Guesses: <span class="guesses">0</span></p>
+          <p class="highscore-message">
+            Highscore: <span class="highscore">20</span>
+          </p>
+        </div>
+
+        <div class="guess-container">
+          <input class="guess-input" type="number" min="1" max="20" />
+          <button class="btn guess">Guess</button>
+        </div>
+
+        <div class="game-buttons">
+          <button class="btn restart">Restart</button>
+          <button class="btn giveup">Give Up</button>
+        </div>
+      </div>
+      <div class="game-footer"><p>Made by Ekaterina Furman</p></div>
+    </section>
+  </body>
+</html>

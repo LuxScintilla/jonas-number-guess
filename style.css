@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  /* border: 1px solid red; */
+}
+
+:root {
+  --pink: #ff3c7d;
+  --teal: #00ebcb;
+}
+
+body {
+  font-family: "Mochiy Pop One", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cccccc;
+  height: 100vh;
+}
+
+.game-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr 25px;
+  background-color: #ffffff;
+  width: 400px;
+  height: 600px;
+  border-top: 4px solid var(--pink);
+  border-bottom: 4px solid var(--teal);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.game-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secret-number-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100px;
+  border: 2px solid #000000;
+  margin: 40px 0px 40px 0px;
+}
+
+.game-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.guess-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px 40px 0px;
+}
+
+.guess-input {
+  text-align: center;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+  height: 50px;
+  width: 100px;
+  border: 2px solid #000000;
+  margin-bottom: 10px;
+}
+
+.btn {
+  font-weight: bolder;
+  border: none;
+  height: 50px;
+  width: 150px;
+  background-color: #cccccc;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 5px var(--teal);
+  background-color: #aaaaaa;
+}
+
+.game-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.game-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  opacity: 0.4;
+}
